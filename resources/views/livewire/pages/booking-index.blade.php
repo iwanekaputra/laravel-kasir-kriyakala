@@ -58,8 +58,7 @@
                                                         style="background-color : #A89A85">Sudah
                                                         Terkirim</a>
                                                 @else
-                                                    <a wire:navigate
-                                                        href="{{ route('admin.booking.approve', $value[0]->id) }}"
+                                                    <a href="{{ route('admin.booking.approve', $value[0]->id) }}"
                                                         class="p-2 rounded color-green text-decoration-none text-white ms-2">Kirim
                                                         File Photo</a>
                                                 @endif
