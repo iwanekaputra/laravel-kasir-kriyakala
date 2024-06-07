@@ -66,10 +66,27 @@
                                                 @endif
                                             @endforeach
                                         </div>
+
+
                                     </div>
 
                                 </div>
+
+                                <div class="row justify-content-center mt-5">
+                                    <div class="col-2">
+                                        <h6 class="color-green rounded p-2 text-center text-white">Tersedia</h6>
+                                    </div>
+                                    <div class="col-3">
+                                        <h6 class=" rounded p-2 text-center text-white"
+                                            style="background-color: #808080">
+                                            Tidak Tersedia</h6>
+                                    </div>
+                                </div>
+
                             @endif
+
+
+
                         </form>
                     </div>
 

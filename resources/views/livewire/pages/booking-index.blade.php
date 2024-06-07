@@ -24,7 +24,7 @@
                                         <th class="text-white">Nama</th>
                                         <th class="text-white">No wa</th>
                                         <th class="text-white">Status Pembayaran</th>
-                                        <th class="text-white">Action</th>
+                                        <th class="text-white">File Photo</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-dark">
@@ -53,8 +53,16 @@
                                                 @endif
                                             </td>
                                             <td>
-
-
+                                                @if ($value[0]->link_file)
+                                                    <a class="rounded p-2 text-decoration-none ms-2"
+                                                        style="background-color : #A89A85">Sudah
+                                                        Terkirim</a>
+                                                @else
+                                                    <a wire:navigate
+                                                        href="{{ route('admin.booking.approve', $value[0]->id) }}"
+                                                        class="p-2 rounded color-green text-decoration-none text-white ms-2">Kirim
+                                                        File Photo</a>
+                                                @endif
                                             </td>
 
                                         </tr>

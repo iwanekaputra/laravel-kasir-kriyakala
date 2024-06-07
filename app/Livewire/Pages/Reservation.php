@@ -26,7 +26,11 @@ class Reservation extends Component
 
     public function save()
     {
-        dd('okelah');
+        $this->invoice->update([
+            'status_payment' => 'Lunas'
+        ]);
+
+        return redirect()->route('admin.booking.index');
     }
 
 

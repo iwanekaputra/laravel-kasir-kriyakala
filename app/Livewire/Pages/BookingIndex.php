@@ -11,7 +11,7 @@ class BookingIndex extends Component
     {
         return view('livewire.pages.booking-index', [
 
-            'bookings' => Booking::orderBy('in_date', 'DESC')->get()
+            'bookings' => Booking::orderBy('created_at', 'DESC')->get()
 
         ])->extends('layouts.admin');
     }

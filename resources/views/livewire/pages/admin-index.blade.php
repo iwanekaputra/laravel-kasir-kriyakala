@@ -101,7 +101,7 @@
                     <h6 class="text-white">Pilih Studio</h6>
                 </div>
             </a>
-            <a href="{{ route('admin.booking.index') }}" wire:navigate>
+            <a href="{{ route('admin.booking.index') }}">
                 <div class="box">
                     <h6 class="text-white">Database Konsumen + Upload Hasil</h6>
                 </div>
