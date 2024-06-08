@@ -23,8 +23,10 @@
                                         <th class="text-white">Invoice</th>
                                         <th class="text-white">Nama</th>
                                         <th class="text-white">No wa</th>
+                                        <th class="text-white">Tanggal Dibuat</th>
                                         <th class="text-white">Status Pembayaran</th>
                                         <th class="text-white">File Photo</th>
+                                        <th class="text-white">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-dark">
@@ -40,6 +42,9 @@
                                             </td>
                                             <td>
                                                 {{ $value[0]->nowa }}
+                                            </td>
+                                            <td>
+                                                {{ $value[0]->created_at }}
                                             </td>
                                             <td>
                                                 @if ($value[0]->status_payment == 'DP 50%')
@@ -62,6 +67,11 @@
                                                         class="p-2 rounded color-green text-decoration-none text-white ms-2">Kirim
                                                         File Photo</a>
                                                 @endif
+                                            </td>
+
+                                            <td>
+                                                <a href="{{ route('admin.booking.show', $value[0]->id) }}"
+                                                    class="p-2 rounded bg-info text-decoration-none text-white ms-2">Detail</a>
                                             </td>
 
                                         </tr>
