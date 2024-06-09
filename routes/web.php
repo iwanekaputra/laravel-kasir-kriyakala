@@ -14,7 +14,7 @@ use App\Livewire\Pages\Reservation;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', Login::class);
-// Route::get('/login', Login::class);
+Route::get('/login', Login::class)->name('login');
 
 Route::get('/reservation/{orderId}', Reservation::class)->name('reservation');
 
