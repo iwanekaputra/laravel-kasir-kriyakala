@@ -61,13 +61,13 @@
                                                         style="width : 20px; height
                                                     20px; margin-top : -20px"
                                                         type="checkbox"
-                                                        wire:model="isDisable.{{ $serviceAdditional->name }}">
+                                                        wire:model.live="isDisable.{{ $serviceAdditional->name }}">
 
                                                     <div class="did-floating-label-content w-100  mt-3">
                                                         <input class="did-floating-input "
                                                             min="{{ $serviceAdditional->default_value }}" type="number"
                                                             placeholder=""
-                                                            wire:model="selectedServiceAdditional.{{ $serviceAdditional->name }}"
+                                                            wire:model.live="selectedServiceAdditional.{{ $serviceAdditional->name }}"
                                                             @if (!$isDisable[$serviceAdditional->name]) disabled @endif>
                                                         <label
                                                             class="did-floating-label">{{ $serviceAdditional->name }}</label>
@@ -84,7 +84,7 @@
                                                         style="width : 20px; height
                                                 20px; margin-top : -20px"
                                                         type="checkbox"
-                                                        wire:model="isDisable.{{ $serviceAdditional->name }}">
+                                                        wire:model.live="isDisable.{{ $serviceAdditional->name }}">
 
                                                     <div class="did-floating-label-content  w-100  mt-3">
 
@@ -93,7 +93,7 @@
                                                             min="{{ $serviceAdditional->default_value }}"
                                                             @if ($serviceAdditional->max_value) max="{{ $serviceAdditional->max_value }}" @endif
                                                             type="number" placeholder=""
-                                                            wire:model="selectedServiceAdditional.{{ $serviceAdditional->name }}"
+                                                            wire:model.live="selectedServiceAdditional.{{ $serviceAdditional->name }}"
                                                             @if (!$isDisable[$serviceAdditional->name]) disabled @endif>
                                                         <label
                                                             class="did-floating-label">{{ $serviceAdditional->name }}</label>
